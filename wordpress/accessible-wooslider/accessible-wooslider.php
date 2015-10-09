@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Accessible WooSlider
-Plugin URI:  https://github.com/accessibilityoz/accessible-slideshow
+Plugin URI:  https://github.com/accessibilityoz/accessible-slideshow/tree/master/wordpress
 Description: A small overlay for WooSlider to make it accessible
 Version:     1.0
 Author:      AccessibilityOz
