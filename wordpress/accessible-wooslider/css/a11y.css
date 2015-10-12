@@ -8,14 +8,17 @@
 }
 #slider-controls a {
   font-size: 0.5em;
-  width: 2.5em;
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
   display: inline-block;
   background: black;
   color: white;
   margin-right: 0.5em;
-  padding: 0.2em 0.4em;
+  /*        padding:0.2em 0.4em; */
   text-align: center;
   border: 1px solid black;
+  border-radius: 50%;
 }
 #slider-controls a span {
   position: absolute;
@@ -32,6 +35,7 @@
   border: 1px solid black;
   background: white;
   color: black;
+  border-radius: 0;
 }
 #slider-controls #slider-prev::before {
   font-family: flexslider-icon;
