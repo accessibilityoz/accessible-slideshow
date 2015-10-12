@@ -30,6 +30,18 @@
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+@media screen and (max-width: 768px) {
+  #slider-controls a {
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    font-size: 1.5em;
+  }
+  #slider-controls #slider-prev,
+  #slider-controls #slider-next {
+    display: none;
+  }
+}
 #slider-controls a:hover,
 #slider-controls a:focus {
   border: 1px solid black;
