@@ -3,6 +3,7 @@ jQuery(document).ready(function(){
 	if (cssdisabled) {
 		return;
 	}
+
 	jQuery(".wooslider").each(function(){
 		jQuery(this).flexslider2({
 			namespace: "wooslider-",
@@ -26,9 +27,13 @@ jQuery(document).ready(function(){
 		jQuery("#slider-controls").prepend('<span id="slider-prevnext"> <a aria-hidden="true" href="#" role="button" id="slider-prev"><span>Previous</span></a> <a aria-hidden="true" href="#" role="button" id="slider-next"><span>Next</span></a> </span>');
 		jQuery("#slider-controls").prepend('<a aria-hidden="true" href="#" role="button" id="slider-pauseplay" class="pause" data-state="playing"><span>Pause</span></a>');
 
-		jQuery("#slider-pauseplay").focus(function(e){
-			slider_pause();
-		})
+		jQuery("#slider-pauseplay").keyup(function(e){
+			// Bit of a nasty hack until we can get the after callback working.
+			var keyCode = e.keyCode || e.which; 
+			if (keyCode == 9) {
+    			slider_pause();
+    		}
+		});
 
 		jQuery("#slider-pauseplay").click(function(e){
             e.preventDefault();
