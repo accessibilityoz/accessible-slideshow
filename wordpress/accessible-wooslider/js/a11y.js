@@ -54,16 +54,16 @@ jQuery(document).ready(function(){
   
         jQuery("#slider-prev").click(function(e){
             e.preventDefault();
-			slider_update_aria();
             jQuery(slider).flexslider2('prev');
             slider_pause(slider);
+			slider_update_aria();
         });
 
         jQuery("#slider-next").click(function(e){
             e.preventDefault();
-            slider_update_aria();
             jQuery(slider).flexslider2('next');
             slider_pause();
+			slider_update_aria();
         });
 
 		jQuery(id+" .slides li a").focus(function() {
