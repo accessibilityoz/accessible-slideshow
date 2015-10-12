@@ -16,6 +16,8 @@ It does the following:
   - those controls have highly-visible keyboard and hover indicators
   - when those controls come in to use via the keyboard ARIA and tabindex
     on the slides are fiddled-with.
+  - on mobile the pause button is made much larger and the previous/next
+    buttons hidden
 
 # Expected user interaction
 
