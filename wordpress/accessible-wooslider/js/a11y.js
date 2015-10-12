@@ -22,7 +22,7 @@ jQuery(document).ready(function(){
 
 		var id = "#"+jQuery(slider).attr('id');
 
-		jQuery(slider).before('<div aria-hidden="true" id="slider-controls"></div>');
+		jQuery(slider).prepend('<div aria-hidden="true" id="slider-controls"></div>');
 		jQuery("#slider-controls").prepend('<span id="slider-prevnext"> <a aria-hidden="true" href="#" role="button" id="slider-prev"><span>Previous</span></a> <a aria-hidden="true" href="#" role="button" id="slider-next"><span>Next</span></a> </span>');
 		jQuery("#slider-controls").prepend('<a aria-hidden="true" href="#" role="button" id="slider-pauseplay" class="pause" data-state="playing"><span>Pause</span></a>');
 
@@ -82,7 +82,6 @@ jQuery(document).ready(function(){
 			}
 		});
 
-
 		// This code nicked from Wooslider
 		var wooslider_holder = jQuery(slider).find("li.slide"); 
 		if(0 !== wooslider_holder.length){
@@ -96,11 +95,6 @@ jQuery(document).ready(function(){
 	}
 
 	function slider_after(elem) {
-//		if (keyboard) {
-			console.log("after");
-			console.log(elem);
-//			slider_update_aria();
-//		}
 	}
 
 	function slider_pause (slider) {
@@ -125,8 +119,7 @@ jQuery(document).ready(function(){
 		if (testcss.currentStyle) {
 			var currstyle = testcss.currentStyle['position'];
 		} else if (window.getComputedStyle) {
-			var currstyle = document.defaultView.getComputedStyle(testcss, null).getPropertyValue(
-'position');
+			var currstyle = document.defaultView.getComputedStyle(testcss, null).getPropertyValue('position');
 		}
 		var cssdisabled = (currstyle == 'static') ? true : false;
 		document.getElementsByTagName('body')[0].removeChild(testcss);

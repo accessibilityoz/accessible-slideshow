@@ -31,6 +31,12 @@ function accessible_wooslider_scripts() {
 	wp_enqueue_script('accessible-wooslider-js', plugins_url( 'js/a11y.js', __FILE__ ),'jquery-flexslider',null,true);
 }
 
+function accessible_wooslider_styles() {
+	wp_enqueue_style('accessible-wooslider-css', plugins_url( 'css/a11y.css', __FILE__ ));
+}
+
+
 add_action( 'wp_enqueue_scripts', 'accessible_wooslider_scripts', 99999999 );
+add_action( 'wp_enqueue_scripts', 'accessible_wooslider_styles', null );
 
 ?>

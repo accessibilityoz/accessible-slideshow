@@ -1,0 +1,51 @@
+#slider-controls {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  z-index: 99;
+}
+#slider-controls a {
+  font-size: 0.5em;
+  width: 2.5em;
+  display: inline-block;
+  background: black;
+  color: white;
+  margin-right: 0.5em;
+  padding: 0.2em 0.4em;
+  text-align: center;
+  border: 1px solid black;
+}
+#slider-controls a span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+#slider-controls a:hover,
+#slider-controls a:focus {
+  border: 1px solid black;
+  background: white;
+  color: black;
+}
+#slider-controls #slider-prev::before {
+  font-family: flexslider-icon;
+  content: '\f001';
+}
+#slider-controls #slider-next::before {
+  font-family: flexslider-icon;
+  content: '\f002';
+}
+#slider-controls #slider-pauseplay.pause::before {
+  font-family: flexslider-icon;
+  content: '\f004';
+}
+#slider-controls #slider-pauseplay.play::before {
+  font-family: flexslider-icon;
+  content: '\f003';
+}
