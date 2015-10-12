@@ -1,8 +1,4 @@
 jQuery(document).ready(function(){
-	var cssdisabled = is_css_disabled();
-	if (cssdisabled) {
-		return;
-	}
 
 	jQuery(".wooslider").each(function(){
 		jQuery(this).flexslider2({
@@ -19,6 +15,22 @@ jQuery(document).ready(function(){
 	});
 
 	function slider_start(slider) {
+		// This code nicked from Wooslider
+		var wooslider_holder = jQuery(slider).find("li.slide"); 
+		if(0 !== wooslider_holder.length){
+			var wooslides = ([]).concat(wooslider_holder.splice(0,2), wooslider_holder.splice(-2,2), jQuery.makeArray(wooslider_holder));
+			jQuery.each(wooslides, function(i,el){
+				var content = jQuery(this).attr("data-wooslidercontent"); 
+				if(typeof content == "undefined" || false == content) return; 
+				jQuery(this).append(content).removeAttr("data-wooslidercontent"); 
+			}); 
+		} 
+
+		var cssdisabled = is_css_disabled();
+		if (cssdisabled) {
+			return;
+		}
+
 		// Custom controls
 
 		var id = "#"+jQuery(slider).attr('id');
@@ -90,17 +102,6 @@ jQuery(document).ready(function(){
 				jQuery(slider).flexslider2("play");
 			}
 		});
-
-		// This code nicked from Wooslider
-		var wooslider_holder = jQuery(slider).find("li.slide"); 
-		if(0 !== wooslider_holder.length){
-			var wooslides = ([]).concat(wooslider_holder.splice(0,2), wooslider_holder.splice(-2,2), jQuery.makeArray(wooslider_holder));
-			jQuery.each(wooslides, function(i,el){
-				var content = jQuery(this).attr("data-wooslidercontent"); 
-				if(typeof content == "undefined" || false == content) return; 
-				jQuery(this).append(content).removeAttr("data-wooslidercontent"); 
-			}); 
-		} 
 	}
 
 	function slider_after(elem) {
