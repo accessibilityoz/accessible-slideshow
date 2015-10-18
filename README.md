@@ -9,3 +9,7 @@ the "after" callback.
 The main limitation is that you can only use the "fade" animation. "slide" messes with the source order too much to be accessible.
 
 A screen reader user who encounters this slider should simply see blocks of content in an unordered list. They won't even know there's a slideshow.
+
+## License
+
+This work is licensed under the GPLv2.
