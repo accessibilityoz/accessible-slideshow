@@ -4,6 +4,8 @@ This is a WordPress plugin that acts as an overlay on top of
 [WooSlider](http://www.woothemes.com/products/wooslider/). You'll
 need that plugin installed before this one will do anything useful.
 
+There's a live example of it in action on the [AccessibilityOz](http://www.accessibilityoz.com/) site.
+
 It works by initialising the slider itself rather than letting the
 WooSlider plugin do that. So the settings available in WooSlider are
 over-ridden if you're using this plugin.
